@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+
+let cantidad, lavadoraG, lavadoraP, total1, total2, costoG, costoP, totalav;
+cantidad=parseInt(prompt('CUANTAS HORAS DESEA ALQUILAR?'))
+
+lavadoraG=parseInt(prompt('CUANTAS LAVADORAS GRANDES?'))
+lavadoraP=parseInt(prompt('CUANTAS LAVADORAS PEQUENAS?'))
+totalav=lavadoraG+lavadoraP
+costoG=lavadoraG*cantidad*4000
+costoP=lavadoraP*cantidad*3000
+total=costoG+costoP
+
+
+document.write('El costo total a pagar es: '+total+' pesos. ')
+
+if (totalav>3) 
+desc=total*0.03
+total-=desc
+
+document.write(`Con descuento: ${total} pesos`)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+</body>
+</html>

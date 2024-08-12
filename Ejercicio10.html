@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<script>
+
+let copias, preciocop, total
+
+copias=parseInt(prompt('INGRESE NUMERO DE COPIAS QUE VA A REALIZAR'))
+
+
+if(copias>0 &&copias<500)
+
+preciocop=120
+
+
+
+else if(copias>=500 &&copias<750)
+
+preciocop=100
+
+
+
+else if(copias>=750 &&copias<1000)
+
+preciocop=80
+
+
+else if  (copias>=1000)
+
+preciocop=50
+
+else (alert('NO ES VALIDO INTELO DE NUEVO'))
+
+
+
+total=copias*preciocop
+
+alert('EL PRECIO POR COPIA ES '+preciocop)
+alert('EL PRECIO total es '+total)
+
+
+
+</script>
+
+</body>
+</html>

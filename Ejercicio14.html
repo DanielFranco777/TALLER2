@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<script>
+
+let costoingredi, costosandwi, tamano, ingredientes, costpequeno, costogrande, costotocineta, costopavo, costoqueso
+costoingredi=0
+tamano=prompt('QUIERE SANDWICH GRANDE O CHICO?').toLowerCase()
+ingredientes=prompt('Ingrese los ingredientes adicionales (tocineta, jalapeño, pavo, queso), separados por comas').toLowerCase().split(',').map(ingrediente => ingrediente.trim())
+
+costogrande=12000
+costpequeno=6000
+costopavo=3000
+costoqueso=2500
+costotocineta=3000
+
+if(tamano=== 'chico')
+costosandwi=costpequeno
+else if (tamano==='grande')
+costosandwi=costogrande
+else alert('TAMANO NO VALIDO ESCOJA GRANDE O CHICO')
+
+if(ingredientes.includes('tocineta'))
+costoingredi +=costotocineta
+
+
+if(ingredientes.includes('pavo'))
+costoingredi +=costopavo
+
+
+if(ingredientes.includes('queso'))
+costoingredi +=costoqueso
+
+
+total=costosandwi+costoingredi
+
+
+alert('EL COSTO DEL SANDWICH ES DE '+total+ ' pesos')
+
+</script>
+
+
+
+
+</body>
+</html>

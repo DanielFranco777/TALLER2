@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+
+let genero, edad, ayuda
+edad=parseInt(prompt('INGRESE EDAD'))
+genero=prompt('ERES HOMBRE O MUJER?')
+
+
+if (genero === "mujer") {
+            if (edad > 50) {
+                ayuda = 120000;
+            } else if (edad >= 30) {
+                ayuda= 100000;
+            } else {
+                ayuda = 0; alert(`El valor de la ayuda mensual que recibirá es: $${ayuda}`);
+            }} 
+            else if (genero === "hombre") {
+            ayuda = 40000;} 
+            else {alert("Género no reconocido. Por favor, ingrese 'masculino' o 'femenino'.");
+            ayuda = 0; 
+        }
+
+        
+        if(ayuda>0)
+            alert(`El valor de la ayuda mensual que recibirá es: $${ayuda}`);
+        
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

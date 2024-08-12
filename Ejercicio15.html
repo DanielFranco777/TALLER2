@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+let cartasUsuario = [Math.floor(Math.random() * 10) + 1, Math.floor(Math.random() * 10) + 1];
+let cartasComputadora = [Math.floor(Math.random() * 10) + 1, Math.floor(Math.random() * 10) + 1];
+
+
+let totalUsuario = cartasUsuario[0] + cartasUsuario[1];
+alert(`Tus cartas iniciales son: ${cartasUsuario.join(', ')}\nTotal: ${totalUsuario}`);
+
+
+let accion = prompt("¿Deseas (A)gregar una carta o (F)inalizar tu turno?");
+if (accion.toLowerCase() === 'a') {
+    cartasUsuario.push(Math.floor(Math.random() * 10) + 1);
+    totalUsuario = cartasUsuario.reduce((total, carta) => total + carta, 0);
+    if (totalUsuario > 21) {
+        alert(`Tus cartas: ${cartasUsuario.join(', ')}\nTotal: ${totalUsuario}\n¡Te pasaste de 21!`);
+    } else {
+        
+        accion = prompt("¿Deseas (A)gregar otra carta o (F)inalizar tu turno?");
+        if (accion.toLowerCase() === 'a') {
+            cartasUsuario.push(Math.floor(Math.random() * 10) + 1);
+            totalUsuario = cartasUsuario.reduce((total, carta) => total + carta, 0);
+            if (totalUsuario > 21) {
+                alert(`Tus cartas: ${cartasUsuario.join(', ')}\nTotal: ${totalUsuario}\n¡Te pasaste de 21!`);
+            } else {
+                
+                accion = prompt("¿Deseas (A)gregar otra carta o (F)inalizar tu turno?");
+                if (accion.toLowerCase() === 'a') {
+                    cartasUsuario.push(Math.floor(Math.random() * 10) + 1);
+                    totalUsuario = cartasUsuario.reduce((total, carta) => total + carta, 0);
+                    if (totalUsuario > 21) {
+                        alert(`Tus cartas: ${cartasUsuario.join(', ')}\nTotal: ${totalUsuario}\n¡Te pasaste de 21!`);
+                    } else {
+                        
+                        accion = prompt("¿Deseas (A)gregar otra carta o (F)inalizar tu turno?");
+                        if (accion.toLowerCase() === 'a') {
+                            cartasUsuario.push(Math.floor(Math.random() * 10) + 1);
+                            totalUsuario = cartasUsuario.reduce((total, carta) => total + carta, 0);
+                            if (totalUsuario > 21) {
+                                alert(`Tus cartas: ${cartasUsuario.join(', ')}\nTotal: ${totalUsuario}\n¡Te pasaste de 21!`);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+let totalComputadora = cartasComputadora[0] + cartasComputadora[1];
+if (totalComputadora < 17) {
+    cartasComputadora.push(Math.floor(Math.random() * 10) + 1);
+    totalComputadora = cartasComputadora.reduce((total, carta) => total + carta, 0);
+    if (totalComputadora < 17) {
+        cartasComputadora.push(Math.floor(Math.random() * 10) + 1);
+        totalComputadora = cartasComputadora.reduce((total, carta) => total + carta, 0);
+        if (totalComputadora < 17) {
+            cartasComputadora.push(Math.floor(Math.random() * 10) + 1);
+            totalComputadora = cartasComputadora.reduce((total, carta) => total + carta, 0);
+        }
+    }
+}
+
+
+alert(`Cartas de la computadora: ${cartasComputadora.join(', ')}\nTotal: ${totalComputadora}`);
+
+
+if (totalUsuario > 21) {
+    alert("La computadora gana. Te pasaste de 21.");
+} else if (totalComputadora > 21) {
+    alert("¡Ganaste! La computadora se pasó de 21.");
+} else if (totalUsuario > totalComputadora) {
+    alert("¡Ganaste! Tu total es mayor que el de la computadora.");
+} else if (totalUsuario < totalComputadora) {
+    alert("La computadora gana. Su total es mayor que el tuyo.");
+} else {
+    alert("Empate.");
+}
+
+
+    </script>
+</body>
+</html>

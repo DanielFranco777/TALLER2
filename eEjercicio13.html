@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+      <script>
+       
+       var operador, valorMinutoInternacional, minutosInternacionales, cargoFijo, valorPaqueteDatos, costomininter, total
+
+operador=prompt('INGRESE EL OPERADOR').toLowerCase()
+
+minutosInternacionales=parseInt(prompt('MINUTOS INTERNACIONALES CONSUMIDOS?'))
+
+
+       if (operador === "tigo") {
+    cargoFijo = 45000
+    valorMinutoInternacional = 200
+    valorPaqueteDatos = 12000}
+
+else if (operador === "claro") {
+    cargoFijo = 30000
+    valorMinutoInternacional = 100
+    valorPaqueteDatos = 18000}
+
+ else if (operador === "movistar") {
+
+    cargoFijo = 40000
+    valorMinutoInternacional = 250
+    valorPaqueteDatos = 8000}
+ else( alert("Operador no válido. Por favor, elija entre Claro, Tigo o Movistar."))
+
+
+ costomininter=minutosInternacionales*valorMinutoInternacional
+ total=cargoFijo+costomininter+valorPaqueteDatos
+ alert('EL costo total del paquete promocion para '+operador+' es de '+total+ ' pesos')
+
+
+    
+  
+      </script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+
+let F, Q, B, M, I, promedio, calificacion
+
+alert('INGRESE LAS NOTAS DEL 0 A 10 ')
+
+F=parseFloat(prompt ('Ingrese la nota de fisica..'))
+Q=parseFloat(prompt ('Ingrese la nota de quimica..'))
+B=parseFloat(prompt ('Ingrese la nota de biologia..'))
+M=parseFloat(prompt ('Ingrese la nota de mates..'))
+I=parseFloat(prompt ('Ingrese la nota de informatica..'))
+
+promedio=(F+Q+B+M+I)/5
+
+if (promedio>=0 && promedio<=5.9)
+calificacion='MALA'
+else if (promedio>=6 && promedio<=8)
+calificacion='BUENA'
+else if (promedio>8)
+calificacion='EXCELENTE'
+else
+calificacion="INVALIDO, INGRESE BIEN LAS NOTAS"
+
+
+document.write('El promedio ES '+promedio+ ' Su calificacion es '+calificacion)
+
+
+
+
+</script>
+
+
+
+
+
+</body>
+</html>
